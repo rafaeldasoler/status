@@ -123,13 +123,13 @@ img {
   letter-spacing: 2px;
 }
 
-.botao {
+.btn-pag-ini {
   flex: 0 0 40px;
   width: 100px;
   border-radius: 5px;
 }
 
-.botao a {
+.btn-pag-ini a {
   display: flex;
   width: 100%;
   height: 100%;
@@ -143,7 +143,7 @@ img {
   transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.botao a:hover {
+.btn-pag-ini a:hover {
   background-color: #ffffff;
   color: #38b6e9;
   transform: translateY(-3px) scale(1.08);
