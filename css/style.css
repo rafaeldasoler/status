@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap');
 
-/*Variáveis CSS*/
+/* Variáveis CSS */
 :root {
   --cor-de-fundo: #f1f1f1;
   --font-family: 'Inter', sans-serif;
 }
+/* --------------- */
 
-/*Reset CSS*/
+/* Reset CSS */
 * {
   margin: 0; /* Remove margens padrão de todos os elementos */
   padding: 0; /* Remove paddings padrão de todos os elementos */  
   box-sizing: border-box; /* Faz com que width/height incluam padding e border */
 }
+/* --------------- */
 
+/* Estilos gerais */
 html, body {
   height: 100%; /* Garante que html e body ocupem 100% da altura da tela */
 }
@@ -20,7 +23,7 @@ html, body {
 body {
   font-size: 16px;
   font-family: var(--font-family);
-  line-height: 1.4; /* Melhora a legibilidade e suaviza fontes em navegadores WebKit */
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -41,6 +44,7 @@ a {
 ul, ol {
   list-style: none; /* Remove marcadores padrão de listas */
 }
+/* --------------- */
 
 /*
 - display: flex transforma o elemento em um flex container, ativando o modelo flexível
@@ -76,6 +80,7 @@ ul, ol {
 
 */
 
+/* Estilos da página inicial */
 #container {
   width: 100%;
   height: 100%;
@@ -101,15 +106,15 @@ ul, ol {
   padding: 6px;
 }
 
-.caixa-inicial-001 h1 {
-  text-align: center;
-  font-size: 1.2rem;
-  padding-bottom: 5px;
-}
-
 .apresentacao {
   flex: 0 0 auto;
   color: #ffffff;
+}
+
+.apresentacao h1 {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
 }
 
 .apresentacao p {
@@ -148,21 +153,22 @@ ul, ol {
 .caixa-inicial-002 {
   flex: 0 0 350px;
   height: 250px;
+  background-color: #ffffff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  align-content: stretch;
-  background-color: #ffffff;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
 }
 
 .caixa-inicial-002 img {
   width: 240px;
   height: 240px;
 }
+/* --------------- */
 
+/* Estilos da página de lojas */
 .area-conteudo {
   flex: 0 0 1080px;
   height: 100%;
