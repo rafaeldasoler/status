@@ -97,15 +97,15 @@ ul, ol {
 .caixa-inicial-001 {
   flex: 0 0 200px;
   height: 250px;
+  background-color: #38b6e9;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 6px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: center;
   align-content: stretch;
-  background-color: #38b6e9;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  padding: 6px;
 }
 
 .apresentacao {
@@ -132,17 +132,16 @@ ul, ol {
 }
 
 .btn-pag-ini a {
-  display: flex;
   width: 100%;
   height: 100%;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
   background-color: #ffffff;
   color: #38b6e9;
+  text-align: center;
+  border-radius: 5px;
   transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-pag-ini a:hover {
@@ -236,10 +235,10 @@ ul, ol {
   width: 100px;
   border-radius: 15px;
   background-color: rgba(40, 167, 69, 0.1);
-  text-align: center;
   color: rgb(40, 167, 69);
-  padding: 5px 10px;
+  text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  padding: 5px 10px;
   margin-left: 0px;
 }
 
@@ -247,10 +246,10 @@ ul, ol {
   width: 100px;
   border-radius: 15px;
   background-color: rgba(255, 147, 7, 0.1);
-  text-align: center;
   color: rgb(255, 147, 7);
-  padding: 5px 10px;
+  text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  padding: 5px 10px;
   margin-left: 0px;
 }
 
@@ -258,10 +257,10 @@ ul, ol {
   width: 100px;
   border-radius: 15px;
   background-color: rgba(204, 2, 2, 0.1);
-  text-align: center;
   color: rgb(204, 2, 2);
-  padding: 5px 10px;
+  text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  padding: 5px 10px;
   margin-left: 0px;
 }
 
@@ -290,7 +289,7 @@ ul, ol {
 .icone-temp {
   position: absolute;
   font-size: 14px;
-  color: #3f3f3f;
+  color: var(--cor-card-descricao);
   text-shadow: 0 1px 6px rgba(0,0,0,0.7);
 }
 
