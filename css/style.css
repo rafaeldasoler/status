@@ -3,6 +3,8 @@
 /* Variáveis CSS */
 :root {
   --cor-de-fundo: #f1f1f1;
+  --cor-card-loja: #ffffff;
+  --cor-card-descricao: #7e7e7e;
   --font-family: 'Inter', sans-serif;
 }
 /* --------------- */
@@ -84,12 +86,12 @@ ul, ol {
 #container {
   width: 100%;
   height: 100%;
+  background-color: var(--cor-de-fundo);
   display: flex; /*Ativa flexbox*/
   flex-flow: row nowrap; /*Direção dos itens / não permite quebra de linha*/
   justify-content: center; /*Alinhamento dos itens (padrão à esquerda)*/
   align-items: center; /*alinhamento dos itens (padrão estica)*/
   align-content: stretch; /*alinhamento emtre múltiplas linhas (padrão ocupam todo o espaço)*/
-  background-color: var(--cor-de-fundo);
 }
 
 .caixa-inicial-001 {
@@ -197,7 +199,6 @@ ul, ol {
 
 .conteudo-2 {
   flex: 1 1 auto;
-  background-color: cyan;
   padding: 8px;
   display: flex;
   flex-flow: row wrap;
@@ -208,7 +209,7 @@ ul, ol {
 
 .card-loja {
   flex: 0 0 260px;
-  background-color: #ffffff;
+  background-color: var(--cor-card-loja);
   margin-bottom: 8px;
   border-radius: 5px;
   padding: 5px;
@@ -222,7 +223,7 @@ ul, ol {
 
 .card-loja p {
   font-size: 0.8rem;
-  color: #494949;
+  color: var(--cor-card-descricao);
   margin-top: 6px;
   margin-left: 12px;
 }
