@@ -162,3 +162,140 @@ img {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+.area-conteudo {
+  flex: 0 0 1080px;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.conteudo-1 {
+  flex: 0 0 150px;
+  padding: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.btn {
+  color: #3f3f3f;
+}
+
+.monitoramento p {
+  color: #3f3f3f;
+}
+
+.conteudo-2 {
+  flex: 1 1 auto;
+  background-color: cyan;
+  padding: 8px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.card-loja {
+  flex: 0 0 260px;
+  background-color: #ffffff;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  padding: 5px;
+  position: relative;
+}
+
+.card-loja h4 {
+  color: #3f3f3f;
+  margin-bottom: 6px;
+}
+
+.card-loja p {
+  font-size: 0.8rem;
+  color: #494949;
+  margin-top: 6px;
+  margin-left: 12px;
+}
+
+.card-loja:hover {
+  cursor: pointer;
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* Classes utilitárias para cada tipo operação */
+.card-loja .operacional {
+  width: 100px;
+  border-radius: 15px;
+  background-color: rgba(40, 167, 69, 0.1);
+  text-align: center;
+  color: rgb(40, 167, 69); /* verde */
+  padding: 5px 10px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3); /* sombra leve */
+  margin-left: 0px;
+}
+
+.card-loja .alerta {
+  width: 100px;
+  border-radius: 15px;
+  background-color: rgba(255, 147, 7, 0.1);
+  text-align: center;
+  color: rgb(255, 147, 7); /* laranja */
+  padding: 5px 10px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3); /* sombra leve */
+  margin-left: 0px;
+}
+
+.card-loja .manutencao {
+  width: 100px;
+  border-radius: 15px;
+  background-color: rgba(204, 2, 2, 0.1);
+  text-align: center;
+  color: rgb(204, 2, 2); /* vermelho */
+  padding: 5px 10px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3); /* sombra leve */
+  margin-left: 0px;
+}
+
+.card-loja .icone {
+  position: absolute;
+  top: 5px;   /* distância do topo */
+  right: 5px; /* distância da direita */
+  font-size: 18px; /* tamanho do ícone */
+}
+
+/* Classes utilitárias para cada tipo de ícone */
+.icone-ok {
+  color: rgb(40, 167, 69); /* verde */
+  text-shadow: 0 1px 6px rgba(40,167,69,0.7); /* sombra leve */
+}
+
+.icone-alerta {
+  color: rgb(255, 147, 7); /* laranja */
+  text-shadow: 0 1px 6px rgba(0,0,0,0.7); /* sombra leve */
+}
+
+.icone-manutencao {
+  color: #cc0202; /* vermelho */
+  text-shadow: 0 1px 6px rgba(0,0,0,0.7); /* sombra leve */
+}
+
+.icone-temp {
+  position: absolute;
+  font-size: 14px; /* tamanho do ícone */
+  color: #3f3f3f;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.7); /* sombra leve */
+}
+
+.icone-temp-1 {
+  top: 31px;   /* distância do topo */
+  left: 1px; /* distância da direita */
+}
+
+.icone-temp-2 {
+  top: 55px;   /* distância do topo */
+  left: 1px; /* distância da direita */
+}
