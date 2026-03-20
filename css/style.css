@@ -4,6 +4,7 @@
 :root {
   --cor-de-fundo: #f1f1f1;
   --cor-card-loja: #ffffff;
+  --cor-card-equip: #ffffff;
   --cor-card-descricao: #7e7e7e;
   --font-family: 'Inter', sans-serif;
 }
@@ -301,4 +302,35 @@ ul, ol {
 .icone-temp-2 {
   top: 55px;
   left: 1px;
+}
+
+/* Estilos da página equipamentos */
+.circ-1, .circ-2 {
+  flex: 1 1 auto;
+  background-color: #38b6e9;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  gap: 20px;
+}
+
+.card-equip {
+  flex: 0 0 250px;
+  background-color: var(--cor-card-equip);
+  border-radius: 5px;
+  padding: 5px;
+  position: relative;
+}
+
+.marca, .btu, .ano {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  gap: 5px;
 }
