@@ -220,7 +220,7 @@ ul, ol {
   margin-bottom: 6px;
 }
 
-.card-loja p {
+.card-loja p{
   font-size: 0.8rem;
   color: var(--cor-card-descricao);
   margin-top: 6px;
@@ -232,35 +232,46 @@ ul, ol {
   transform: translateY(-3px) scale(1.03);
 }
 
-.card-loja .operacional {
+.card-loja .operacional, .card-equip .operacional {
   width: 100px;
   border-radius: 15px;
   background-color: rgba(40, 167, 69, 0.1);
   color: rgb(40, 167, 69);
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 3px rgba(40,167,69,0.3);
   padding: 5px 10px;
   margin-left: 0px;
 }
 
-.card-loja .alerta {
+.card-loja .alerta, .card-equip .alerta {
   width: 100px;
   border-radius: 15px;
   background-color: rgba(255, 147, 7, 0.1);
   color: rgb(255, 147, 7);
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 3px rgba(255,147,7,0.3);
   padding: 5px 10px;
   margin-left: 0px;
 }
 
-.card-loja .manutencao {
+.card-loja .manutencao, .card-equip .manutencao {
   width: 100px;
   border-radius: 15px;
   background-color: rgba(204, 2, 2, 0.1);
   color: rgb(204, 2, 2);
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 3px rgba(204,2,2,0.3);
+  padding: 5px 10px;
+  margin-left: 0px;
+}
+
+.card-loja .parado, .card-equip .parado {
+  width: 100px;
+  border-radius: 15px;
+  background-color: rgba(204, 2, 2, 0.1);
+  color: rgb(204, 2, 2);
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(204,2,2,0.3);
   padding: 5px 10px;
   margin-left: 0px;
 }
@@ -287,6 +298,11 @@ ul, ol {
   text-shadow: 0 1px 6px rgba(204,2,2,0.7);
 }
 
+.icone-parado {
+  color: rgb(204, 2, 2);
+  text-shadow: 0 1px 6px rgba(204,2,2,0.7);
+}
+
 .icone-temp {
   position: absolute;
   font-size: 14px;
@@ -305,9 +321,8 @@ ul, ol {
 }
 
 /* Estilos da página equipamentos */
-.circ-1, .circ-2 {
+.circ-1, .circ-2, .circ-3, .circ-4, .circ-5, .circ-6, .circ-7, .circ-8, .circ-9 {
   flex: 1 1 auto;
-  background-color: #38b6e9;
   border-radius: 5px;
   padding: 5px;
   display: flex;
@@ -326,11 +341,46 @@ ul, ol {
   position: relative;
 }
 
+.cx-img-evap, .cx-img-cond {
+  background-color: #77ccee;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.cx-img-cond {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-cond {
+  width: 67%;
+}
+
+.ident { 
+  margin-bottom: 10px;
+}
+
+.card-equip .icone {
+  position: absolute;
+  top: 254px;
+  right: 5px;
+  font-size: 18px;
+}
+
 .marca, .btu, .ano {
+  font-size: 0.8rem;
+  color: var(--cor-card-descricao);
+  margin-bottom: 5px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   align-content: stretch;
-  gap: 5px;
+}
+
+.card-equip p{
+  font-size: 0.8rem;
+  color: var(--cor-card-descricao);
 }
