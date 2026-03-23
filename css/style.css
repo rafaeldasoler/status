@@ -49,40 +49,6 @@ ul, ol {
 }
 /* --------------- */
 
-/*
-- display: flex transforma o elemento em um flex container, ativando o modelo flexível
-  - flex-direction define a direção principal dos itens:
-    - row (padrão): em linha, da esquerda para a direita.
-    - column: em coluna, de cima para baixo.
-    - row-reverse / column-reverse: ordem invertida.
-  - flex-wrap → controla se os itens podem quebrar linha:
-    - nowrap (padrão): todos na mesma linha.
-    - wrap: itens quebram para a próxima linha.
-    - wrap-reverse: quebram, mas em ordem invertida.
-  - flex-flow → shorthand que combina flex-direction e flex-wrap.
-    - Exemplo: flex-flow: row wrap; → itens em linha que podem quebrar.
-  - justify-content → distribui os itens ao longo do eixo principal (horizontal se row, vertical se column):
-    - flex-start (padrão): alinhados ao início.
-    - center: centralizados.
-    - flex-end: alinhados ao fim.
-    - space-between: espaço igual entre itens.
-    - space-around: espaço igual em volta de cada item.
-    - space-evenly: espaço totalmente uniforme.
-  - align-items → alinha os itens no eixo cruzado (vertical se row):
-    - stretch (padrão): itens esticam para ocupar toda a altura.
-    - flex-start: alinhados ao topo.
-    - center: centralizados.
-    - flex-end: alinhados ao fundo.
-    - baseline: alinhados pela linha de base do texto.
-  - align-content → organiza múltiplas linhas de itens (quando há quebra):
-    - stretch (padrão): linhas ocupam todo o espaço disponível.
-    - flex-start: linhas agrupadas no topo.
-    - center: linhas agrupadas no centro.
-    - flex-end: linhas agrupadas no fundo.
-    - space-between, space-around, space-evenly: distribuem espaço entre as linhas.
-
-*/
-
 /* Estilos da página inicial */
 #container {
   width: 100%;
@@ -213,6 +179,8 @@ ul, ol {
   border-radius: 5px;
   padding: 5px;
   position: relative;
+  transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .card-loja h4 {
@@ -229,7 +197,7 @@ ul, ol {
 
 .card-loja:hover {
   cursor: pointer;
-  transform: translateY(-3px) scale(1.03);
+  transform: scale(0.97);
 }
 
 .card-loja .operacional, .card-equip .operacional {
