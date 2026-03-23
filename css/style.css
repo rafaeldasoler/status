@@ -172,7 +172,7 @@ ul, ol {
 
 /* Estilos da página de lojas */
 .area-conteudo {
-  flex: 0 1 1080px;
+  flex: 0 0 1080px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -322,23 +322,30 @@ ul, ol {
 
 /* Estilos da página equipamentos */
 .circ-1, .circ-2, .circ-3, .circ-4, .circ-5, .circ-6, .circ-7, .circ-8, .circ-9 {
-  flex: 1 1 auto;
-  border-radius: 5px;
-  padding: 5px;
+  flex: 0 0 1080px;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
   align-content: stretch;
-  gap: 20px;
+  gap: 21px;
+  padding: 8px;
+  box-shadow: 0px 4px 10px rgba(122, 122, 122, 0.5);
 }
 
 .card-equip {
   flex: 0 0 250px;
   background-color: var(--cor-card-equip);
   border-radius: 5px;
-  padding: 5px;
+  padding: 7px;
   position: relative;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.card-equip:hover {
+  transform: scale(0.97);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .cx-img-evap, .cx-img-cond {
