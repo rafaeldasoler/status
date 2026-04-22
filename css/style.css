@@ -311,10 +311,40 @@ ul, ol {
   cursor: pointer;
 }
 
+.tooltip-premium {
+  /* Posicionamento */
+  position: absolute;
+  bottom: -80px; /* Começa um pouco abaixo */
+  left: 50%;
+  transform: translateX(-50%) scale(0.8); /* Centraliza e começa menor */
+  
+  /* Estilização */
+  width: 200px;
+  padding: 15px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  
+  /* Estado Inicial (Invisível) */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito "mola" */
+}
+
 .card-equip:hover {
   transform: scale(0.97);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
+
+.card-equip:hover .tooltip-premium {
+  opacity: 1;
+  visibility: visible;
+  bottom: 280px; /* Sobe suavemente para a posição final */
+  transform: translateX(-50%) scale(1.1);
+}
+
 
 .cx-img-evap, .cx-img-cond {
   background-color: #77ccee;
