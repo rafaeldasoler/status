@@ -369,3 +369,7 @@ ul, ol {
   color: white;
   font-size: 1rem;
 }
+
+.obsoleto {
+  background-color: rgb(223, 223, 223);
+}
