@@ -167,7 +167,7 @@ ul, ol {
   padding: 5px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
   gap: 20px;
@@ -272,9 +272,10 @@ ul, ol {
 
 /* Estilos da página equipamentos */
 .circuito {
-  flex: 0 0 1080px;
+  flex: 0 1 auto;
+  max-width: 1080px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
   align-content: stretch;
