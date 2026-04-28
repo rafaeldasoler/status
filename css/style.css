@@ -271,7 +271,7 @@ ul, ol {
 }
 
 /* Estilos da página equipamentos */
-.circ-1, .circ-2, .circ-3, .circ-4, .circ-5, .circ-6, .circ-7, .circ-8, .circ-9 {
+.circuito {
   flex: 0 0 1080px;
   display: flex;
   flex-flow: row wrap;
