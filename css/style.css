@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap');
 
 /* ==========================================
-   VARIÁVEIS CSS - DESIGN SYSTEM
+   VARIÁVEIS
    ========================================== */
+
 :root {
   /* Cores de Marca e Ação */
   --color-primary: #38b6e9;
@@ -48,6 +49,7 @@
 /* ==========================================
    RESET E ESTILOS GERAIS
    ========================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -96,7 +98,7 @@ ul, ol {
 }
 
 /* ==========================================
-   PÁGINA INICIAL
+   PÁGINA INDEX
    ========================================== */
 
 main {
@@ -176,15 +178,21 @@ main {
 /* ==========================================
    PÁGINA DE LOJAS
    ========================================== */
+
 .area-conteudo {
-  flex: 0 0 var(--max-content-width);
+  flex: 1 1 auto;
+  max-width: var(--max-content-width);
+  margin: 5px;
   display: flex;
   flex-flow: column nowrap;
+  align-items: flex-start;
+  gap: 5px;
+  border-radius: var(--radius-sm);
 }
 
 .conteudo-1 {
-  flex: 0 0 150px;
-  padding: 10px;
+  flex: 0 1 150px;
+  padding: 5px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
@@ -192,8 +200,7 @@ main {
 }
 
 .conteudo-2 {
-  flex: 0 0 var(--max-content-width);
-  padding: 5px;
+  flex: 1 1 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -205,6 +212,7 @@ main {
 /* ==========================================
    CARDS (COMUM)
    ========================================== */
+
 .card-loja, .card-equip {
   background-color: var(--color-surface);
   border-radius: var(--radius-sm);
@@ -237,6 +245,7 @@ main {
 /* ==========================================
    COMPONENTES DE STATUS
    ========================================== */
+
 .operacional, .alerta, .manutencao, .parado {
   width: 100px;
   border-radius: var(--radius-full);
@@ -286,6 +295,7 @@ main {
 /* ==========================================
    PÁGINA DE EQUIPAMENTOS
    ========================================== */
+
 .circuito {
   flex: 0 1 auto;
   max-width: var(--max-content-width);
