@@ -174,29 +174,29 @@ ul, ol {
 }
 
 .card-loja {
-  flex: 0 0 250px;
-  background-color: var(--cor-card-loja);
-  border-radius: 5px;
-  padding: 5px;
-  position: relative;
-  transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+  /**/flex: 0 0 250px;
+  /**/background-color: var(--cor-card-loja);
+  /**/border-radius: 5px;
+  /**/padding: 5px;
+  /**/position: relative;
+  /**/transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
   cursor: pointer;
 }
 
 .card-loja h4 {
-  color: #3f3f3f;
-  margin-bottom: 6px;
+  /**/color: #3f3f3f;
+  /**/margin-bottom: 6px;
 }
 
 .card-loja p {
-  font-size: 0.8rem;
-  color: var(--cor-card-descricao);
-  margin-top: 6px;
+  /**/font-size: 0.8rem;
+  /**/color: var(--cor-card-descricao);
+  /**/margin-top: 6px;
 }
 
 .card-loja:hover {
-  cursor: pointer;
-  transform: scale(0.97);
+  /**/cursor: pointer;
+  /**/transform: scale(0.97);
 }
 
 .card-loja .operacional, .card-equip .operacional {
