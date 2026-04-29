@@ -213,13 +213,13 @@ ul, ol {
 
 .card-loja h4 {
   color: var(--color-text-main);
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .card-loja p {
   font-size: 0.8rem;
   color: var(--color-text-muted);
-  margin-top: 6px;
+  margin-bottom: 3px;
 }
 
 /* ==========================================
@@ -317,6 +317,7 @@ ul, ol {
 .card-equip:hover .info {
   opacity: 1;
   transform: translateY(0);
+  background-color: #01a4e4;
 }
 
 /* Imagens e Detalhes do Card */
