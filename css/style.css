@@ -85,22 +85,34 @@ ul, ol {
   list-style: none;
 }
 
-/* ==========================================
-   PÁGINA INICIAL
-   ========================================== */
-#container {
+.container {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
-.caixa-inicial-001 {
+/* ==========================================
+   PÁGINA INICIAL
+   ========================================== */
+
+main {
+  flex: 0 1 auto;
+  max-width: var(--max-content-width);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre {
   flex: 0 0 200px;
-  height: 250px;
   background-color: var(--color-primary);
+  height: 250px;
   border-top-left-radius: var(--radius-sm);
   border-bottom-left-radius: var(--radius-sm);
   padding: 6px;
@@ -110,18 +122,18 @@ ul, ol {
   align-items: center;
 }
 
-.apresentacao {
+.sobre-texto {
   flex: 0 0 auto;
-  color: var(--color-text-on-primary);
+  color: var(--color-primary-contrast);
 }
 
-.apresentacao h1 {
+.sobre-texto h1 {
   text-align: center;
   font-size: 1.2rem;
   padding-bottom: 5px;
 }
 
-.apresentacao p {
+.sobre-texto p {
   text-align: center;
   font-size: 0.8rem;
   letter-spacing: 2px;
@@ -150,7 +162,7 @@ ul, ol {
   box-shadow: var(--shadow-md);
 }
 
-.caixa-inicial-002 {
+.sobre-imagem {
   flex: 0 0 250px;
   height: 250px;
   background-color: var(--color-surface);
