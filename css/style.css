@@ -361,3 +361,14 @@ ul, ol {
 .obsoleto {
   background-color: var(--color-surface-muted);
 }
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+  background-color: var(--color-surface-muted);
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
