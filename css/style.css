@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Syne:wght@600;700;800&display=swap');
-
 /* ==========================================
    VARIÁVEIS
    ========================================== */
@@ -22,7 +20,7 @@
   /* Superfícies e Neutros */
   --color-bg-page: #f4f7fa;
   --color-surface: #ffffff;
-  --color-surface-muted: rgb(223, 223, 223);
+  --color-surface-muted: #dfdfdf;
 
   /* Tipografia e Cores de Texto */
   --color-text-main: #1e2a35;
@@ -48,7 +46,7 @@
 
   /* Layout */
   --max-content-width: 1080px;
-  --navbar-height: 68px;
+  --navbar-height: 65px;
 }
 
 /* ==========================================
@@ -146,6 +144,141 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================
+   NAVBAR
+   ========================================== */
+
+.navbar {
+  position: fixed; /* Fixa o elemento na tela, ignorando o scroll da página */
+  top: 0; /* Alinha o elemento no topo e expande para as bordas laterais */
+  left: 0;
+  right: 0;
+  z-index: 100; /* Garante que o menu flutue sobre os outros elementos da página */
+  height: var(--navbar-height); /* Define a altura usando a variável centralizada no :root */
+}
+
+.navbar-inner {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-primary-contrast);
+  transition: color var(--transition-normal);
+}
+
+.navbar-logo {
+  color: var(--color-text-main);
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.logo-text strong {
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  color: rgba(255,255,255,0.85);
+  transition: color var(--transition-normal), background var(--transition-normal);
+}
+
+.nav-link {
+  color: var(--color-text-muted);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(56,182,233,0.12);
+  color: var(--color-primary);
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-primary-contrast);
+  border-radius: 2px;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.navbar-toggle span {
+  background: var(--color-text-main);
+}
+
+.navbar-toggle.open span:nth-child(1) { 
+  transform: translateY(7px) rotate(45deg); 
+}
+
+.navbar-toggle.open span:nth-child(2) { 
+  opacity: 0; 
+}
+
+.navbar-toggle.open span:nth-child(3) { 
+  transform: translateY(-7px) rotate(-45deg); 
+}
+
+/* ==========================================
+   NAVBAR — ESTADO FIXO PARA PÁGINAS INTERNAS
+   ========================================== */
+ 
+.navbar {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+ 
+.navbar .navbar-logo {
+  color: var(--color-text-main);
+}
+ 
+.navbar .nav-link {
+  color: var(--color-text-muted);
+}
+ 
+.navbar .navbar-toggle span {
+  background: var(--color-text-main);
+}
+
+/* ==========================================
    BOTÕES
    ========================================== */
 
@@ -201,119 +334,6 @@ h1, h2, h3, h4 {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
-
-/* ==========================================
-   NAVBAR
-   ========================================== */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  height: var(--navbar-height);
-  background: transparent;
-  transition: background var(--transition-slow), box-shadow var(--transition-slow);
-}
-
-.navbar.scrolled {
-  background: var(--color-surface);
-  box-shadow: var(--shadow-sm);
-}
-
-.navbar-inner {
-  max-width: var(--max-content-width);
-  margin: 0 auto;
-  padding: 0 24px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.navbar-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--color-primary-contrast);
-  transition: color var(--transition-normal);
-}
-
-.navbar.scrolled .navbar-logo {
-  color: var(--color-text-main);
-}
-
-.logo-img {
-  height: 36px;
-  width: auto;
-}
-
-.logo-text {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
-
-.logo-text strong {
-  font-weight: 800;
-  color: var(--color-primary);
-}
-
-.navbar-nav {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.nav-link {
-  font-size: 0.92rem;
-  font-weight: 500;
-  padding: 8px 14px;
-  border-radius: var(--radius-full);
-  color: rgba(255,255,255,0.85);
-  transition: color var(--transition-normal), background var(--transition-normal);
-}
-
-.navbar.scrolled .nav-link {
-  color: var(--color-text-muted);
-}
-
-.nav-link:hover,
-.nav-link.active {
-  background: rgba(56,182,233,0.12);
-  color: var(--color-primary);
-}
-
-.navbar-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-  border-radius: var(--radius-sm);
-}
-
-.navbar-toggle span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--color-primary-contrast);
-  border-radius: 2px;
-  transition: transform var(--transition-normal), opacity var(--transition-normal);
-}
-
-.navbar.scrolled .navbar-toggle span {
-  background: var(--color-text-main);
-}
-
-.navbar-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.navbar-toggle.open span:nth-child(2) { opacity: 0; }
-.navbar-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ==========================================
    HERO
@@ -594,7 +614,7 @@ h1, h2, h3, h4 {
 
 .sobre-section {
   padding: 96px 0;
-  background: var(--color-surface);
+  background: var(--color-bg-page);
 }
 
 .sobre-inner {
@@ -981,26 +1001,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* ==========================================
-   NAVBAR — ESTADO FIXO PARA PÁGINAS INTERNAS
-   ========================================== */
- 
-.page-lojas .navbar {
-  background: var(--color-surface);
-  box-shadow: var(--shadow-sm);
-}
- 
-.page-lojas .navbar .navbar-logo {
-  color: var(--color-text-main);
-}
- 
-.page-lojas .navbar .nav-link {
-  color: var(--color-text-muted);
-}
- 
-.page-lojas .navbar .navbar-toggle span {
-  background: var(--color-text-main);
-}
+
  
 /* ==========================================
    PAGE HEADER — LOJAS
@@ -1368,190 +1369,5 @@ a.card-loja:hover .card-arrow {
   .resumo-item {
     flex-direction: row;
     flex: 1 1 calc(50% - 6px);
-  }
-}
-
-
-
-/* ADICIONAR ESTES ESTILOS AO FINAL DO SEU ARQUIVO STYLE.CSS 
-   OU SUBSTITUIR CASO JÁ EXISTAM ESTILOS DE EQUIPAMENTOS
-*/
-
-/* --- Page Equipamentos --- */
-.page-equipamentos {
-  background-color: var(--color-bg-page);
-}
-
-.page-header {
-  padding: 120px 0 40px;
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-surface-muted);
-}
-
-.btn-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--color-primary);
-  font-weight: 500;
-  margin-bottom: 20px;
-  transition: transform 0.2s ease;
-}
-
-.btn-back:hover {
-  transform: translateX(-5px);
-}
-
-.header-info .page-title {
-  font-size: 2.5rem;
-  margin-bottom: 8px;
-}
-
-.header-info .page-subtitle {
-  color: var(--color-text-muted);
-  font-size: 1.1rem;
-}
-
-/* --- Circuitos e Grid --- */
-.equipamentos-section {
-  padding: 60px 0;
-}
-
-.circuito-group {
-  margin-bottom: 50px;
-}
-
-.circuito-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--color-text-main);
-  border-left: 4px solid var(--color-primary);
-  padding-left: 15px;
-}
-
-.equipamentos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-/* --- Cards de Equipamentos --- */
-.card-equip {
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  padding: 24px;
-  box-shadow: var(--shadow-sm);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  transition: var(--transition-base);
-  border: 1px solid transparent;
-}
-
-.card-equip:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-5px);
-  border-color: var(--color-primary-light);
-}
-
-/* Status Badges */
-.card-badge {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 4px 12px;
-  border-radius: 50px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.badge-ok { background: var(--color-bg-success); color: var(--color-success); }
-.badge-alerta { background: var(--color-bg-warning); color: var(--color-warning); }
-.badge-parado { background: var(--color-bg-danger); color: var(--color-danger); }
-
-/* Conteúdo do Card */
-.equip-img-container {
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.equip-img {
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.equip-main-info {
-  margin-bottom: 16px;
-}
-
-.equip-id {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  font-weight: 500;
-}
-
-.equip-main-info h3 {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.25rem;
-  color: var(--color-text-main);
-}
-
-.equip-specs {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-  padding: 12px 0;
-  border-top: 1px solid var(--color-surface-muted);
-  border-bottom: 1px solid var(--color-surface-muted);
-  margin-bottom: 16px;
-}
-
-.spec-item {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-}
-
-.spec-item span { color: var(--color-text-muted); }
-
-.equip-status-msg {
-  font-size: 0.85rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  line-height: 1.4;
-}
-
-.status-ok .equip-status-msg { color: var(--color-success); }
-.status-alerta .equip-status-msg { color: var(--color-warning); }
-.status-parado .equip-status-msg { color: var(--color-danger); }
-
-/* --- Breakpoints Customizados --- */
-@media (max-width: 1100px) {
-  .equipamentos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .header-info .page-title {
-    font-size: 2rem;
-  }
-  
-  .equipamentos-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .page-header {
-    padding: 100px 0 30px;
   }
 }

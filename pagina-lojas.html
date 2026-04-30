@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lojas — Clima Service</title>
+  <title>Clima Service</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page-lojas">
-
+<body class="page-lojas"> <!--   -->
   <!-- ============================
        NAVBAR
   ============================= -->
-  <header class="navbar scrolled" id="navbar">
+  <header class="navbar" id="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="navbar-logo">
         <img src="imagens/logo-clima-branco.png" alt="Clima Service" class="logo-img">
@@ -23,12 +22,14 @@
       </a>
       <nav class="navbar-nav" id="navMenu">
         <a href="index.html" class="nav-link">Início</a>
-        <a href="pagina-lojas.html" class="nav-link active">Lojas</a>
+        <a href="pagina-lojas.html" class="nav-link active">Área Cliente</a>
         <a href="download.html" class="nav-link">Download</a>
         <a href="relatorio.html" class="nav-link">Relatório</a>
       </nav>
       <button class="navbar-toggle" id="navToggle" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </header>
@@ -660,12 +661,15 @@
   </footer>
 
   <script>
+    // Mobile menu
     const toggle = document.getElementById('navToggle');
     const menu = document.getElementById('navMenu');
     toggle.addEventListener('click', () => {
       menu.classList.toggle('open');
       toggle.classList.toggle('open');
     });
+
+    // Fechar menu ao clicar em link
     menu.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         menu.classList.remove('open');

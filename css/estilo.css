@@ -1,0 +1,184 @@
+
+
+/* ADICIONAR ESTES ESTILOS AO FINAL DO SEU ARQUIVO STYLE.CSS 
+   OU SUBSTITUIR CASO JÁ EXISTAM ESTILOS DE EQUIPAMENTOS
+*/
+
+/* --- Page Equipamentos --- */
+.page-equipamentos {
+  background-color: var(--color-bg-page);
+}
+
+.page-header {
+  padding: 120px 0 40px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-surface-muted);
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.btn-back:hover {
+  transform: translateX(-5px);
+}
+
+.header-info .page-title {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.header-info .page-subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+/* --- Circuitos e Grid --- */
+.equipamentos-section {
+  padding: 60px 0;
+}
+
+.circuito-group {
+  margin-bottom: 50px;
+}
+
+.circuito-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-text-main);
+  border-left: 4px solid var(--color-primary);
+  padding-left: 15px;
+}
+
+.equipamentos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* --- Cards de Equipamentos --- */
+.card-equip {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-base);
+  border: 1px solid transparent;
+}
+
+.card-equip:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+  border-color: var(--color-primary-light);
+}
+
+/* Status Badges */
+.card-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-ok { background: var(--color-bg-success); color: var(--color-success); }
+.badge-alerta { background: var(--color-bg-warning); color: var(--color-warning); }
+.badge-parado { background: var(--color-bg-danger); color: var(--color-danger); }
+
+/* Conteúdo do Card */
+.equip-img-container {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.equip-img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.equip-main-info {
+  margin-bottom: 16px;
+}
+
+.equip-id {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.equip-main-info h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem;
+  color: var(--color-text-main);
+}
+
+.equip-specs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 12px 0;
+  border-top: 1px solid var(--color-surface-muted);
+  border-bottom: 1px solid var(--color-surface-muted);
+  margin-bottom: 16px;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.spec-item span { color: var(--color-text-muted); }
+
+.equip-status-msg {
+  font-size: 0.85rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.status-ok .equip-status-msg { color: var(--color-success); }
+.status-alerta .equip-status-msg { color: var(--color-warning); }
+.status-parado .equip-status-msg { color: var(--color-danger); }
+
+/* --- Breakpoints Customizados --- */
+@media (max-width: 1100px) {
+  .equipamentos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-info .page-title {
+    font-size: 2rem;
+  }
+  
+  .equipamentos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-header {
+    padding: 100px 0 30px;
+  }
+}
