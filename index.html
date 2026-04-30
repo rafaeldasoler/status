@@ -1,34 +1,269 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clima Service</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <main>
-            <section class="sobre">
-                <div class="sobre-texto">
-                    <h1>Bem vindo a Clima</h1>
-                    <p>
-                        Comprometida em oferecer qualidade e excelência todos os dias.
-                    </p>
-                </div>
-                <div class="btn-pag-ini">
-                    <a href="pagina-lojas.html">Clique Aqui</a>
-                </div>
-            </section>
-            <section class="sobre-imagem">
-                    <img src="imagens/logo-clima-branco.png" alt="logotipo clima">
-            </section>
-        </main>
-        <!--
-        <footer class="footer">
-            <p>&copy; 2026 Clima Service - Todos os direitos reservados</p>
-        </footer>
-        -->
+
+  <!-- ============================
+       NAVBAR
+  ============================= -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <img src="imagens/logo-clima-branco.png" alt="Clima Service" class="logo-img">
+        <span class="logo-text">Clima<strong>Service</strong></span>
+      </a>
+
+      <nav class="navbar-nav" id="navMenu">
+        <a href="index.html" class="nav-link active">Início</a>
+        <a href="pagina-lojas.html" class="nav-link">Lojas</a>
+        <a href="download.html" class="nav-link">Download</a>
+        <a href="relatorio.html" class="nav-link">Relatório</a>
+      </nav>
+
+      <button class="navbar-toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </header>
+
+  <!-- ============================
+       HERO
+  ============================= -->
+  <section class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-tag">Climatização Profissional</span>
+        <h1 class="hero-title">Conforto térmico<br>para cada ambiente</h1>
+        <p class="hero-desc">Soluções completas em ar-condicionado residencial, empresarial e industrial. Instalação, manutenção, projetos e sistemas VRF com excelência e qualidade.</p>
+        <div class="hero-actions">
+          <a href="pagina-lojas.html" class="btn btn-primary">Encontrar loja</a>
+          <a href="#servicos" class="btn btn-ghost">Ver serviços</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-icon">❄</div>
+          <p class="hero-card-label">Sistemas VRF</p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">🏢</div>
+          <p class="hero-card-label">Projetos comerciais</p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">🏠</div>
+          <p class="hero-card-label">Residencial</p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">🔧</div>
+          <p class="hero-card-label">Manutenção</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Role para conhecer</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ============================
+       NÚMEROS
+  ============================= -->
+  <section class="numeros">
+    <div class="section-inner">
+      <div class="numero-item">
+        <span class="numero-valor">+15</span>
+        <span class="numero-label">Anos de mercado</span>
+      </div>
+      <div class="numero-item">
+        <span class="numero-valor">+8</span>
+        <span class="numero-label">Lojas próprias</span>
+      </div>
+      <div class="numero-item">
+        <span class="numero-valor">+5k</span>
+        <span class="numero-label">Instalações realizadas</span>
+      </div>
+      <div class="numero-item">
+        <span class="numero-valor">98%</span>
+        <span class="numero-label">Clientes satisfeitos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       SERVIÇOS
+  ============================= -->
+  <section class="servicos" id="servicos">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">O que fazemos</span>
+        <h2 class="section-title">Serviços especializados<br>em climatização</h2>
+        <p class="section-desc">Da instalação ao projeto completo, a Clima Service oferece soluções para todos os portes de ambiente.</p>
+      </div>
+      <div class="servicos-grid">
+
+        <div class="servico-card">
+          <div class="servico-icon">❄</div>
+          <h3>Ar-condicionado Residencial</h3>
+          <p>Instalação e manutenção de splits, multisplits e janeleiros. Ambiente doméstico com conforto garantido.</p>
+        </div>
+
+        <div class="servico-card destaque">
+          <div class="servico-icon">🏢</div>
+          <h3>Climatização Empresarial</h3>
+          <p>Projetos sob medida para escritórios, comércios e galpões industriais. Eficiência energética e conforto para equipes.</p>
+          <span class="servico-badge">Mais procurado</span>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon">🔗</div>
+          <h3>Sistemas VRF</h3>
+          <p>Volume de refrigerante variável — a solução mais moderna para grandes espaços com múltiplas zonas de controle.</p>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon">📐</div>
+          <h3>Projetos Técnicos</h3>
+          <p>Dimensionamento, memorial de cálculo e documentação técnica para aprovação em órgãos competentes.</p>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon">🔧</div>
+          <h3>Manutenção Preventiva</h3>
+          <p>Programas de manutenção periódica para garantir vida útil longa e eficiência dos equipamentos.</p>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon">♻</div>
+          <h3>Higienização</h3>
+          <p>Limpeza profissional completa dos equipamentos, com produto bactericida e melhora na qualidade do ar.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       SOBRE
+  ============================= -->
+  <section class="sobre-section">
+    <div class="section-inner sobre-inner">
+      <div class="sobre-texto">
+        <span class="section-tag">Quem somos</span>
+        <h2 class="section-title">Comprometidos com<br>conforto e qualidade</h2>
+        <p>A Clima Service nasceu com o propósito de levar soluções de climatização de alto padrão para residências e empresas. Com mais de 15 anos de experiência, combinamos técnica, inovação e atendimento personalizado.</p>
+        <p>Nossa equipe é formada por engenheiros e técnicos certificados, preparados para projetos de qualquer complexidade — do split residencial ao sistema VRF corporativo.</p>
+        <a href="pagina-lojas.html" class="btn btn-primary" style="margin-top: 1.5rem; display: inline-flex;">Conheça nossas lojas</a>
+      </div>
+      <div class="sobre-diferenciais">
+        <div class="diferencial">
+          <div class="diferencial-icon">✓</div>
+          <div>
+            <h4>Equipe certificada</h4>
+            <p>Técnicos com certificação SENAI e treinamento nas principais marcas do mercado.</p>
+          </div>
+        </div>
+        <div class="diferencial">
+          <div class="diferencial-icon">✓</div>
+          <div>
+            <h4>Garantia estendida</h4>
+            <p>Serviços com garantia e suporte pós-instalação para total tranquilidade do cliente.</p>
+          </div>
+        </div>
+        <div class="diferencial">
+          <div class="diferencial-icon">✓</div>
+          <div>
+            <h4>Atendimento ágil</h4>
+            <p>Orçamento em até 24h e visita técnica programada conforme disponibilidade do cliente.</p>
+          </div>
+        </div>
+        <div class="diferencial">
+          <div class="diferencial-icon">✓</div>
+          <div>
+            <h4>Marcas premium</h4>
+            <p>Trabalhamos com as principais marcas: Daikin, LG, Samsung, Carrier, Midea e outras.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       CTA FINAL
+  ============================= -->
+  <section class="cta-section">
+    <div class="section-inner cta-inner">
+      <h2>Pronto para ter conforto<br>no seu ambiente?</h2>
+      <p>Entre em contato com a loja mais próxima e solicite um orçamento sem compromisso.</p>
+      <a href="pagina-lojas.html" class="btn btn-white">Encontrar loja mais próxima</a>
+    </div>
+  </section>
+
+  <!-- ============================
+       FOOTER
+  ============================= -->
+  <footer class="footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">Clima<strong>Service</strong></span>
+        <p>Comprometida em oferecer qualidade e excelência todos os dias.</p>
+      </div>
+      <div class="footer-nav">
+        <span class="footer-nav-title">Navegação</span>
+        <a href="index.html">Início</a>
+        <a href="pagina-lojas.html">Lojas</a>
+        <a href="download.html">Download</a>
+        <a href="relatorio.html">Relatório</a>
+      </div>
+      <div class="footer-nav">
+        <span class="footer-nav-title">Serviços</span>
+        <a href="#">Residencial</a>
+        <a href="#">Empresarial</a>
+        <a href="#">Sistemas VRF</a>
+        <a href="#">Manutenção</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Clima Service — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Mobile menu
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+
+    // Fechar menu ao clicar em link
+    menu.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html>

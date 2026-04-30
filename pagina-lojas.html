@@ -1,277 +1,677 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lojas</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lojas — Clima Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="container">
-        <main class="area-conteudo">
-            <div class="conteudo-1">
-                <div>
-                    <a href="index.html" class="btn">
-                        <i class="bi bi-arrow-left"></i> Voltar
-                    </a>
-                </div>
-                <div>
-                    <h3>Status das Lojas</h3>
-                    <p>Monitoramento de todas as lojas</p>
-                </div>
-            </div>
-            <div class="conteudo-2">
-                <div class="card-loja"> <!-- Loja 130 Palhoça -->
-                    <a href="pag-equip-130.html">
-                        <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                        <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                        <i class="bi bi-wrench icone icone-manutencao"></i>
-                        <h4>Loja 130 Palhoça</h4>
-                        <p>M<sup>2</sup>: 5524</p>
-                        <p>BTU necessário: 3.614.400</p>
-                        <p>BTU instalado: 1.100.100</p>
-                        <!-- <p class="operacional">Operacional</p> -->
-                        <!-- <p class="alerta">Atenção</p> -->
-                        <p class="manutencao">Manutenção</p>
-                    </a>
-                </div>
-                <div class="card-loja"> <!-- Loja 145 Florianópolis -->
-                    <a href="pag-equip-145.html">
-                        <i class="bi bi-check-circle icone icone-ok"></i>
-                        <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                        <!-- <i class="bi bi-wrench icone icone-manutencao"></i> -->
-                        <h4>Loja 145 Florianópolis</h4>
-                        <p>M<sup>2</sup>: 4286</p>
-                        <p>BTU necessário: 2.871.600</p>
-                        <p>BTU instalado: 1.100.100</p>
-                        <p class="operacional">Operacional</p>
-                        <!-- <p class="alerta">Alerta</p> -->
-                        <!-- <p class="manutencao">Manutenção</p> -->
-                    </a>
-                </div>
-                <div class="card-loja"> <!-- Loja 160 São José -->
-                    <a href="pag-equip-160.html">
-                        <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                        <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                        <i class="bi bi-wrench icone icone-manutencao"></i>
-                        <h4>Loja 160 São José</h4>
-                        <p>M<sup>2</sup>: 5838</p>
-                        <p>BTU necessário: 3.802.800</p>
-                        <p>BTU instalado: 1.100.100</p>
-                        <!-- <p class="operacional">Operacional</p> -->
-                        <!--<p class="alerta">Alerta</p>-->
-                        <p class="manutencao">Manutenção</p>
-                    </a>
-                </div>
-                <div class="card-loja obsoleto"> <!-- Loja 185 Içara -->
-                        <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                        <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                        <i class="bi bi-wrench icone icone-manutencao"></i>
-                        <h4>Loja 185 Içara</h4>
-                        <p>M<sup>2</sup>: 4158</p>
-                        <p>BTU necessário: 2.794.800</p>
-                        <p>BTU instalado: 1.100.100</p>
-                        <!-- <p class="operacional">Operacional</p> -->
-                        <!--<p class="alerta">Alerta</p>-->
-                        <p class="manutencao">Manutenção</p>
-                </div>
-                <div class="card-loja"> <!-- Loja 210 Florianópolis -->
-                    <a href="pag-equip-210.html">
-                        <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                        <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                        <i class="bi bi-wrench icone icone-manutencao"></i>
-                        <h4>Loja 210 Florianópolis</h4>
-                        <p>M<sup>2</sup>: 3641</p>
-                        <p>BTU necessário: 2.484.600</p>
-                        <p>BTU instalado: 1.100.100</p>
-                        <!-- <p class="operacional">Operacional</p> -->
-                        <!-- <p class="alerta">Atenção</p> -->
-                        <p class="manutencao">Manutenção</p>
-                    </a>
-                </div>
-                <div class="card-loja obsoleto"> <!-- Loja 220 Tubarão -->
-                    <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                    <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                    <i class="bi bi-wrench icone icone-manutencao"></i>
-                    <h4>Loja 220 Tubarão</h4>
-                    <p>M<sup>2</sup>: 3688</p>
-                    <p>BTU necessário: 2.512.800</p>
-                    <p>BTU instalado: 1.100.100</p>
-                    <!-- <p class="operacional">Operacional</p> -->
-                    <!--<p class="alerta">Alerta</p>-->
-                    <p class="manutencao">Manutenção</p>
-                </div>
-                <div class="card-loja obsoleto"> <!-- Loja 235 Criciúma -->
-                    <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                    <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                    <i class="bi bi bi-wrench icone icone-manutencao"></i>
-                    <h4>Loja 235 Criciúma</h4>
-                    <p>M<sup>2</sup>: 4579</p>
-                    <p>BTU necessário: 3.047.400</p>
-                    <p>BTU instalado: 1.100.100</p>
-                    <!-- <p class="operacional">Operacional</p> -->
-                    <!--<p class="alerta">Alerta</p>-->
-                    <p class="manutencao">Manutenção</p>
-                </div>
-                <div class="card-loja obsoleto"> <!-- Loja 260 Lages -->
-                    <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                    <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                    <i class="bi bi-wrench icone icone-manutencao"></i>
-                    <h4>Loja 260 Lages</h4>
-                    <p>M<sup>2</sup>: 3170</p>
-                    <p>BTU necessário: 2.202.000</p>
-                    <p>BTU instalado: 1.100.100</p>
-                    <!-- <p class="operacional">Operacional</p> -->
-                    <!--<p class="alerta">Alerta</p>-->
-                    <p class="manutencao">Manutenção</p>
-                </div>
-                <div class="card-loja"> <!-- Loja 290 Biguaçu -->
-                    <a href="pag-equip-290.html">
-                        <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                        <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                        <i class="bi bi-wrench icone icone-manutencao"></i>
-                        <h4>Loja 290 Biguaçu</h4>
-                        <p>M<sup>2</sup>: 2260</p>
-                        <p>BTU necessário: 1.656.000</p>
-                        <p>BTU instalado: 1.100.100</p>
-                        <!-- <p class="operacional">Operacional</p> -->
-                        <!-- <p class="alerta">Atenção</p> -->
-                        <p class="manutencao">Manutenção</p>
-                    </a>
-                </div>
-                <div class="card-loja"> <!-- Loja 306 São José -->
-                    <a href="pag-equip-306.html">
-                        <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                        <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                        <i class="bi bi-wrench icone icone-manutencao"></i>
-                        <h4>Loja 306 São José</h4>
-                        <p>M<sup>2</sup>: 1531</p>
-                        <p>BTU necessário: 1.218.600</p>
-                        <p>BTU instalado: 1.100.100</p>
-                        <!-- <p class="operacional">Operacional</p> -->
-                        <!--<p class="alerta">Alerta</p>-->
-                        <p class="manutencao">Manutenção</p>
-                    </a>
-                </div>
-                <div class="card-loja obsoleto"> <!-- Loja 345 Caxias -->
-                    <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                    <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                    <i class="bi bi-wrench icone icone-manutencao"></i>
-                    <h4>Loja 345 Caxias</h4>
-                    <p>M<sup>2</sup>: 4308</p>
-                    <p>BTU necessário: 2.884.800</p>
-                    <p>BTU instalado: 1.100.100</p>
-                    <!-- <p class="operacional">Operacional</p> -->
-                    <!--<p class="alerta">Alerta</p>-->
-                    <p class="manutencao">Manutenção</p>
-                </div>
-                <div class="card-loja"> <!-- Loja 365 São José -->
-                    <a href="pag-equip-365.html">
-                        <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                        <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                        <i class="bi bi-wrench icone icone-manutencao"></i>
-                        <h4>Loja 365 São José</h4>
-                        <p>M<sup>2</sup>: 4396</p>
-                        <p>BTU necessário: 2.937.600</p>
-                        <p>BTU instalado: 1.100.100</p>
-                        <!-- <p class="operacional">Operacional</p> -->
-                        <!--<p class="alerta">Alerta</p>-->
-                        <p class="manutencao">Manutenção</p>
-                    </a>
-                </div>
-                <div class="card-loja obsoleto"> <!-- Loja 370 Viamão -->
-                    <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                    <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                    <i class="bi bi-wrench icone icone-manutencao"></i>
-                    <h4>Loja 370 Viamão</h4>
-                    <p>M<sup>2</sup>: 3072</p>
-                    <p>BTU necessário: 2.143.200</p>
-                    <p>BTU instalado: 1.100.100</p>
-                    <!-- <p class="operacional">Operacional</p> -->
-                    <!-- <p class="alerta">Atenção</p> -->
-                    <p class="manutencao">Manutenção</p>
-                </div>
-                <div class="card-loja"> <!-- Loja 379 Florianópolis -->
-                    <a href="pag-equip-379.html">
-                        <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                        <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                        <i class="bi bi-wrench icone icone-manutencao"></i>
-                        <h4>Loja 379 Florianópolis</h4>
-                        <p>M<sup>2</sup>: 1359</p>
-                        <p>BTU necessário: 1.115.400</p>
-                        <p>BTU instalado: 1.100.100</p>
-                        <!-- <p class="operacional">Operacional</p> -->
-                        <!--<p class="alerta">Alerta</p>-->
-                        <p class="manutencao">Manutenção</p>
-                    </a>
-                </div>
-                <div class="card-loja"> <!-- Loja 462 Palhoça -->
-                    <a href="pag-equip-462.html">
-                        <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                        <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                        <i class="bi bi-wrench icone icone-manutencao"></i>
-                        <h4>Loja 462 Palhoça</h4>
-                        <p>M<sup>2</sup>: 1638</p>
-                        <p>BTU necessário: 1.282.800</p>
-                        <p>BTU instalado: 1.100.100</p>
-                        <!-- <p class="operacional">Operacional</p> -->
-                        <!--<p class="alerta">Alerta</p>-->
-                        <p class="manutencao">Manutenção</p>
-                    </a>
-                </div>
-                <div class="card-loja obsoleto"> <!-- Loja 485 Araranguá -->
-                    <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                    <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                    <i class="bi bi-wrench icone icone-manutencao"></i>
-                    <h4>Loja 485 Araranguá</h4>
-                    <p>M<sup>2</sup>: 2415</p>
-                    <p>BTU necessário: 1.749.000</p>
-                    <p>BTU instalado: 1.100.100</p>
-                    <!-- <p class="operacional">Operacional</p> -->
-                    <!--<p class="alerta">Alerta</p>-->
-                    <p class="manutencao">Manutenção</p>
-                </div>
-                <div class="card-loja obsoleto"> <!-- Loja 545 Canoas -->
-                    <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                    <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                    <i class="bi bi-wrench icone icone-manutencao"></i>
-                    <h4>Loja 545 Canoas</h4>
-                    <p>M<sup>2</sup>: 4452</p>
-                    <p>BTU necessário: 2.971.200</p>
-                    <p>BTU instalado: 1.100.100</p>
-                    <!-- <p class="operacional">Operacional</p> -->
-                    <!--<p class="alerta">Alerta</p>-->
-                    <p class="manutencao">Manutenção</p>
-                </div>
-                <div class="card-loja obsoleto"> <!-- 773 São Leopoldo -->
-                    <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                    <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                    <i class="bi bi-wrench icone icone-manutencao"></i>
-                    <h4>Loja 773 São Leopoldo</h4>
-                    <p>M<sup>2</sup>: 1269</p>
-                    <p>BTU necessário: 1.061.400</p>
-                    <p>BTU instalado: 1.100.100</p>
-                    <!-- <p class="operacional">Operacional</p> -->
-                    <!--<p class="alerta">Alerta</p>-->
-                    <p class="manutencao">Manutenção</p>
-                </div>
-                <div class="card-loja"> <!-- Loja 810 Florianópolis -->
-                    <a href="pag-equip-810.html">
-                        <!-- <i class="bi bi-check-circle icone icone-ok"></i> -->
-                        <!-- <i class="bi bi-exclamation-circle icone icone-alerta"></i> -->
-                        <i class="bi bi-wrench icone icone-manutencao"></i>
-                        <h4>Loja 810 Florianópolis</h4>
-                        <p>M<sup>2</sup>: 3086</p>
-                        <p>BTU necessário: 2.151.600</p>
-                        <p>BTU instalado: 1.100.100</p>
-                        <!-- <p class="operacional">Operacional</p> -->
-                        <!-- <p class="alerta">Alerta</p> -->
-                        <p class="manutencao">Manutenção</p>
-                    </a>
-                </div>
-            </div>
-        </main>
+<body class="page-lojas">
+
+  <!-- ============================
+       NAVBAR
+  ============================= -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <img src="imagens/logo-clima-branco.png" alt="Clima Service" class="logo-img">
+        <span class="logo-text">Clima<strong>Service</strong></span>
+      </a>
+      <nav class="navbar-nav" id="navMenu">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="pagina-lojas.html" class="nav-link active">Lojas</a>
+        <a href="download.html" class="nav-link">Download</a>
+        <a href="relatorio.html" class="nav-link">Relatório</a>
+      </nav>
+      <button class="navbar-toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
+
+  <!-- ============================
+       PAGE HEADER
+  ============================= -->
+  <section class="page-header">
+    <div class="page-header-inner">
+      <div class="page-header-text">
+        <span class="section-tag">Monitoramento</span>
+        <h1 class="page-header-title">Status das Lojas</h1>
+        <p class="page-header-desc">Acompanhe em tempo real a situação de climatização de todas as unidades.</p>
+      </div>
+      <div class="status-resumo">
+        <div class="resumo-item resumo-ok">
+          <i class="bi bi-check-circle-fill"></i>
+          <div>
+            <span class="resumo-valor">1</span>
+            <span class="resumo-label">Operacional</span>
+          </div>
+        </div>
+        <div class="resumo-item resumo-manutencao">
+          <i class="bi bi-wrench-adjustable-circle-fill"></i>
+          <div>
+            <span class="resumo-valor">17</span>
+            <span class="resumo-label">Manutenção</span>
+          </div>
+        </div>
+        <div class="resumo-item resumo-obsoleto">
+          <i class="bi bi-archive-fill"></i>
+          <div>
+            <span class="resumo-valor">8</span>
+            <span class="resumo-label">Inativas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       GRID DE LOJAS
+  ============================= -->
+  <main class="lojas-main">
+    <div class="lojas-inner">
+
+      <!-- Loja 130 Palhoça -->
+      <a href="pag-equip-130.html" class="card-loja">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">130</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Palhoça</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">5.524 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">3.614.400</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <i class="bi bi-arrow-right card-arrow"></i>
+        </div>
+      </a>
+
+      <!-- Loja 145 Florianópolis -->
+      <a href="pag-equip-145.html" class="card-loja">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">145</div>
+          <div class="card-status-icon operacional">
+            <i class="bi bi-check-lg"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Florianópolis</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">4.286 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">2.871.600</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge operacional"><i class="bi bi-check-circle"></i> Operacional</span>
+          <i class="bi bi-arrow-right card-arrow"></i>
+        </div>
+      </a>
+
+      <!-- Loja 160 São José -->
+      <a href="pag-equip-160.html" class="card-loja">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">160</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">São José</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">5.838 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">3.802.800</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <i class="bi bi-arrow-right card-arrow"></i>
+        </div>
+      </a>
+
+      <!-- Loja 185 Içara (obsoleto - sem link) -->
+      <div class="card-loja obsoleto">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">185</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Içara</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">4.158 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">2.794.800</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <span class="badge-inativa"><i class="bi bi-archive"></i> Inativa</span>
+        </div>
+      </div>
+
+      <!-- Loja 210 Florianópolis -->
+      <a href="pag-equip-210.html" class="card-loja">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">210</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Florianópolis</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">3.641 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">2.484.600</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <i class="bi bi-arrow-right card-arrow"></i>
+        </div>
+      </a>
+
+      <!-- Loja 220 Tubarão (obsoleto) -->
+      <div class="card-loja obsoleto">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">220</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Tubarão</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">3.688 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">2.512.800</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <span class="badge-inativa"><i class="bi bi-archive"></i> Inativa</span>
+        </div>
+      </div>
+
+      <!-- Loja 235 Criciúma (obsoleto) -->
+      <div class="card-loja obsoleto">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">235</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Criciúma</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">4.579 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">3.047.400</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <span class="badge-inativa"><i class="bi bi-archive"></i> Inativa</span>
+        </div>
+      </div>
+
+      <!-- Loja 260 Lages (obsoleto) -->
+      <div class="card-loja obsoleto">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">260</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Lages</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">3.170 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">2.202.000</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <span class="badge-inativa"><i class="bi bi-archive"></i> Inativa</span>
+        </div>
+      </div>
+
+      <!-- Loja 290 Biguaçu -->
+      <a href="pag-equip-290.html" class="card-loja">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">290</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Biguaçu</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">2.260 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">1.656.000</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <i class="bi bi-arrow-right card-arrow"></i>
+        </div>
+      </a>
+
+      <!-- Loja 306 São José -->
+      <a href="pag-equip-306.html" class="card-loja">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">306</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">São José</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">1.531 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">1.218.600</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <i class="bi bi-arrow-right card-arrow"></i>
+        </div>
+      </a>
+
+      <!-- Loja 345 Caxias (obsoleto) -->
+      <div class="card-loja obsoleto">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">345</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Caxias</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">4.308 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">2.884.800</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <span class="badge-inativa"><i class="bi bi-archive"></i> Inativa</span>
+        </div>
+      </div>
+
+      <!-- Loja 365 São José -->
+      <a href="pag-equip-365.html" class="card-loja">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">365</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">São José</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">4.396 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">2.937.600</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <i class="bi bi-arrow-right card-arrow"></i>
+        </div>
+      </a>
+
+      <!-- Loja 370 Viamão (obsoleto) -->
+      <div class="card-loja obsoleto">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">370</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Viamão</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">3.072 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">2.143.200</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <span class="badge-inativa"><i class="bi bi-archive"></i> Inativa</span>
+        </div>
+      </div>
+
+      <!-- Loja 379 Florianópolis -->
+      <a href="pag-equip-379.html" class="card-loja">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">379</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Florianópolis</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">1.359 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">1.115.400</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <i class="bi bi-arrow-right card-arrow"></i>
+        </div>
+      </a>
+
+      <!-- Loja 462 Palhoça -->
+      <a href="pag-equip-462.html" class="card-loja">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">462</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Palhoça</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">1.638 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">1.282.800</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <i class="bi bi-arrow-right card-arrow"></i>
+        </div>
+      </a>
+
+      <!-- Loja 485 Araranguá (obsoleto) -->
+      <div class="card-loja obsoleto">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">485</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Araranguá</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">2.415 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">1.749.000</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <span class="badge-inativa"><i class="bi bi-archive"></i> Inativa</span>
+        </div>
+      </div>
+
+      <!-- Loja 545 Canoas (obsoleto) -->
+      <div class="card-loja obsoleto">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">545</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Canoas</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">4.452 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">2.971.200</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <span class="badge-inativa"><i class="bi bi-archive"></i> Inativa</span>
+        </div>
+      </div>
+
+      <!-- Loja 773 São Leopoldo (obsoleto) -->
+      <div class="card-loja obsoleto">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">773</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">São Leopoldo</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">1.269 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">1.061.400</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <span class="badge-inativa"><i class="bi bi-archive"></i> Inativa</span>
+        </div>
+      </div>
+
+      <!-- Loja 810 Florianópolis -->
+      <a href="pag-equip-810.html" class="card-loja">
+        <div class="card-loja-header">
+          <div class="card-loja-numero">810</div>
+          <div class="card-status-icon manutencao">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+        </div>
+        <h4 class="card-loja-nome">Florianópolis</h4>
+        <div class="card-loja-dados">
+          <div class="dado-item">
+            <span class="dado-label">Área</span>
+            <span class="dado-valor">3.086 m²</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU necessário</span>
+            <span class="dado-valor">2.151.600</span>
+          </div>
+          <div class="dado-item">
+            <span class="dado-label">BTU instalado</span>
+            <span class="dado-valor">1.100.100</span>
+          </div>
+        </div>
+        <div class="card-loja-footer">
+          <span class="status-badge manutencao"><i class="bi bi-wrench"></i> Manutenção</span>
+          <i class="bi bi-arrow-right card-arrow"></i>
+        </div>
+      </a>
+
+    </div><!-- /lojas-inner -->
+  </main>
+
+  <!-- ============================
+       FOOTER
+  ============================= -->
+  <footer class="footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">Clima<strong>Service</strong></span>
+        <p>Comprometida em oferecer qualidade e excelência todos os dias.</p>
+      </div>
+      <div class="footer-nav">
+        <span class="footer-nav-title">Navegação</span>
+        <a href="index.html">Início</a>
+        <a href="pagina-lojas.html">Lojas</a>
+        <a href="download.html">Download</a>
+        <a href="relatorio.html">Relatório</a>
+      </div>
+      <div class="footer-nav">
+        <span class="footer-nav-title">Serviços</span>
+        <a href="#">Residencial</a>
+        <a href="#">Empresarial</a>
+        <a href="#">Sistemas VRF</a>
+        <a href="#">Manutenção</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Clima Service — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+    menu.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html>
