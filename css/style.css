@@ -1282,6 +1282,10 @@ a.card-loja:hover .card-arrow {
   .lojas-inner {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .equipamentos-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
 }
  
 /* ---------------------------------------------------- */
@@ -1355,6 +1359,10 @@ a.card-loja:hover .card-arrow {
   .lojas-inner {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .equipamentos-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
 }
  
 /* ----------------------------------------------- */
@@ -1470,6 +1478,10 @@ a.card-loja:hover .card-arrow {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
+  .equipamentos-grid {
+    grid-template-columns: repeat(1, 1fr);
+}
 }
  
 /* ----------------------------------------------- */
@@ -1506,5 +1518,9 @@ a.card-loja:hover .card-arrow {
   .resumo-item {
     flex-direction: row;
     flex: 1 1 calc(50% - 6px);
+  }
+
+  .equipamentos-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
