@@ -509,13 +509,13 @@ h1, h2, h3, h4 {
    NÚMEROS
    ========================================== */
 
-.numeros {
-  background: var(--color-surface);
+.numeros { /* EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR */
+  background: #6ee78c;
   padding: 48px 0;
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
-.numeros .section-inner {
+.numeros .section-inner { /* EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
@@ -989,7 +989,7 @@ h1, h2, h3, h4 {
 
 .equipamentos-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 24px;
 }
 
@@ -1312,7 +1312,7 @@ a.card-loja:hover .card-arrow {
     gap: 48px;
   }
 
-  .numeros .section-inner {
+  .numeros .section-inner { /* EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR */
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1462,7 +1462,7 @@ a.card-loja:hover .card-arrow {
     grid-template-columns: 1fr;
   }
 
-  .numeros .section-inner {
+  .numeros .section-inner { /* EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR */
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1486,7 +1486,7 @@ a.card-loja:hover .card-arrow {
     font-size: 1.9rem;
   }
 
-  .numeros .section-inner {
+  .numeros .section-inner { /* EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR */
     grid-template-columns: repeat(2, 1fr);
   }
 
