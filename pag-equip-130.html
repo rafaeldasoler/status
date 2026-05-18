@@ -21,14 +21,12 @@
         <img src="imagens/logo-clima-branco.png" alt="Clima Service" class="logo-img">
         <span class="logo-text">Clima<strong>Service</strong></span>
       </a>
-
       <nav class="navbar-nav" id="navMenu">
-        <a href="index.html" class="nav-link active">Início</a>
-        <a href="pagina-lojas.html" class="nav-link">Lojas</a>
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="pagina-lojas.html" class="nav-link active">Área Cliente</a>
         <a href="download.html" class="nav-link">Download</a>
         <a href="relatorio.html" class="nav-link">Relatório</a>
       </nav>
-
       <button class="navbar-toggle" id="navToggle" aria-label="Abrir menu">
         <span></span>
         <span></span>
@@ -276,6 +274,25 @@
   </div>
 </section>
 
+<script>
+    // Mobile menu
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+
+    // Fechar menu ao clicar em link
+    menu.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
 
 </body>
 </html>
