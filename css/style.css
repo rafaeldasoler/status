@@ -105,7 +105,28 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================
-   NAVBAR
+   NAVBAR — ESTADO FIXO PARA PÁGINAS INTERNAS
+   ========================================== */
+ 
+.navbar {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+ 
+.navbar .navbar-logo {
+  color: var(--color-text-main);
+}
+ 
+.navbar .nav-link {
+  color: var(--color-text-muted);
+}
+ 
+.navbar .navbar-toggle span {
+  background: var(--color-text-main);
+}
+
+/* ==========================================
+                    NAVBAR
    ========================================== */
 
 .navbar {
@@ -218,26 +239,7 @@ h1, h2, h3, h4 {
   transform: translateY(-7px) rotate(-45deg); 
 }
 
-/* ==========================================
-   NAVBAR — ESTADO FIXO PARA PÁGINAS INTERNAS
-   ========================================== */
- 
-.navbar {
-  background: var(--color-surface);
-  box-shadow: var(--shadow-sm);
-}
- 
-.navbar .navbar-logo {
-  color: var(--color-text-main);
-}
- 
-.navbar .nav-link {
-  color: var(--color-text-muted);
-}
- 
-.navbar .navbar-toggle span {
-  background: var(--color-text-main);
-}
+
 
 
 /* ==========================================
