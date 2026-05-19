@@ -882,7 +882,7 @@ h1, h2, h3, h4 {
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 32px;
 }
@@ -909,44 +909,128 @@ h1, h2, h3, h4 {
 /* Resumo de status no header */
 .status-resumo {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 0;
+  min-width: 280px;
+}
+
+.donut-chart {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.donut-svg {
+  width: 100%;
+  height: auto;
+  transform: rotate(-90deg);
+}
+
+.donut-ring,
+.donut-segment {
+  fill: none;
+  stroke-width: 16;
+  stroke-linecap: round;
+}
+
+.donut-ring {
+  stroke: rgba(255,255,255,0.14);
+}
+
+.donut-segment {
+  transition: stroke-dasharray 0.4s ease, stroke-dashoffset 0.4s ease;
+}
+
+.donut-ok {
+  stroke: #6ee78c;
+}
+
+.donut-manutencao {
+  stroke: #ffc96b;
+}
+
+.donut-obsoleto {
+  stroke: rgba(255,255,255,0.7);
+}
+
+.donut-center {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.status-legend {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  width: 100%;
+}
+
+.legend-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
   gap: 12px;
+  width: min(100%, 320px);
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius-md);
+}
+
+.legend-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
   flex-shrink: 0;
 }
- 
-.resumo-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255,255,255,0.14);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: var(--radius-md);
-  padding: 12px 16px;
-  backdrop-filter: blur(6px);
+
+.legend-text {
+  display: grid;
+  gap: 4px;
 }
- 
-.resumo-item i {
-  font-size: 1.4rem;
+
+.legend-label {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
 }
- 
-.resumo-ok i      { color: #6ee78c; }
-.resumo-manutencao i { color: #ffc96b; }
-.resumo-obsoleto i   { color: rgba(255,255,255,0.5); }
- 
-.resumo-valor {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1;
-}
- 
-.resumo-label {
-  display: block;
-  font-size: 0.72rem;
+
+.legend-percent {
   color: rgba(255,255,255,0.65);
-  white-space: nowrap;
-  margin-top: 2px;
+  font-size: 0.82rem;
+}
+
+.legend-item strong {
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.legend-ok .legend-icon {
+  background: #6ee78c;
+}
+
+.legend-manutencao .legend-icon {
+  background: #ffc96b;
+}
+
+.legend-obsoleto .legend-icon {
+  background: rgba(255,255,255,0.7);
 }
  
 /* ==========================================
@@ -1344,11 +1428,28 @@ a.card-loja:hover .card-arrow {
   
   .page-header-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 24px;
+  }
+
+  .page-header-text {
+    text-align: center;
   }
  
   .status-resumo {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .donut-chart {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+  }
+
+  .status-legend {
     width: 100%;
   }
  
@@ -1395,10 +1496,24 @@ a.card-loja:hover .card-arrow {
   }
  
   .status-resumo {
-    flex-direction: row;
-    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
  
+  .donut-chart {
+    width: 140px;
+    height: 140px;
+  }
+
+  .status-legend {
+    width: 100%;
+  }
+ 
+  .legend-item {
+    padding: 10px 14px;
+  }
+
   .resumo-item {
     flex-direction: column;
     align-items: center;
@@ -1514,6 +1629,20 @@ a.card-loja:hover .card-arrow {
  
   .status-resumo {
     flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .donut-chart {
+    width: 120px;
+    height: 120px;
+  }
+
+  .donut-center-text {
+    font-size: 0.95rem;
+  }
+
+  .legend-item {
+    padding: 10px 12px;
   }
  
   .resumo-item {

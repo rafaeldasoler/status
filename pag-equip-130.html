@@ -46,25 +46,39 @@
         <p class="page-header-desc">Acompanhe em tempo real a situação de climatização de todas as unidades.</p>
       </div>
       <div class="status-resumo">
-        <div class="resumo-item resumo-ok">
-          <i class="bi bi-check-circle-fill"></i>
-          <div>
-            <span class="resumo-valor">10</span>
-            <span class="resumo-label">Operacional</span>
-          </div>
+        <div class="donut-chart" aria-label="Resumo de status dos equipamentos">
+          <svg viewBox="0 0 120 120" class="donut-svg" role="img" aria-hidden="true">
+            <circle class="donut-ring" cx="60" cy="60" r="50"></circle>
+            <circle class="donut-segment donut-ok" cx="60" cy="60" r="50" stroke-dasharray="87.3 226.9" stroke-dashoffset="0"></circle>
+            <circle class="donut-segment donut-manutencao" cx="60" cy="60" r="50" stroke-dasharray="148.6 165.6" stroke-dashoffset="-87.3"></circle>
+            <circle class="donut-segment donut-obsoleto" cx="60" cy="60" r="50" stroke-dasharray="78.5 235.7" stroke-dashoffset="-235.9"></circle>
+          </svg>
+          <div class="donut-center">36</div>
         </div>
-        <div class="resumo-item resumo-manutencao">
-          <i class="bi bi-wrench-adjustable-circle-fill"></i>
-          <div>
-            <span class="resumo-valor">17</span>
-            <span class="resumo-label">Manutenção</span>
+        <div class="status-legend">
+          <div class="legend-item legend-ok">
+            <span class="legend-icon" aria-hidden="true"></span>
+            <span class="legend-text">
+              <span class="legend-label">Operacional</span>
+              <span class="legend-percent">27,8%</span>
+            </span>
+            <strong>10</strong>
           </div>
-        </div>
-        <div class="resumo-item resumo-obsoleto">
-          <i class="bi bi-archive-fill"></i>
-          <div>
-            <span class="resumo-valor">9</span>
-            <span class="resumo-label">Inativas</span>
+          <div class="legend-item legend-manutencao">
+            <span class="legend-icon" aria-hidden="true"></span>
+            <span class="legend-text">
+              <span class="legend-label">Manutenção</span>
+              <span class="legend-percent">47,2%</span>
+            </span>
+            <strong>17</strong>
+          </div>
+          <div class="legend-item legend-obsoleto">
+            <span class="legend-icon" aria-hidden="true"></span>
+            <span class="legend-text">
+              <span class="legend-label">Inativas</span>
+              <span class="legend-percent">25%</span>
+            </span>
+            <strong>9</strong>
           </div>
         </div>
       </div>
