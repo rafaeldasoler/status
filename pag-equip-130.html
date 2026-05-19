@@ -23,8 +23,8 @@
       </a>
       <nav class="navbar-nav" id="navMenu">
         <a href="index.html" class="nav-link">Início</a>
-        <a href="pagina-lojas.html" class="nav-link active">Área Cliente</a>
-        <a href="download.html" class="nav-link">Download</a>
+        <a href="pagina-lojas.html" class="nav-link">Área Cliente</a>
+        <a href="#" class="nav-link active">Equipamentos</a>
         <a href="relatorio.html" class="nav-link">Relatório</a>
       </nav>
       <button class="navbar-toggle" id="navToggle" aria-label="Abrir menu">
@@ -36,8 +36,8 @@
   </header>
 
   <!-- ============================
-                    PAGE HEADER
-  ======================================== -->
+       PAGE HEADER
+  ============================= -->
   <section class="page-header">
     <div class="page-header-inner">
       <div class="page-header-text">
@@ -275,6 +275,33 @@
 </section>
 
 <script>
+
+      // Gráfico de pizza
+  const ctx = document.getElementById('statusChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Operacional', 'Manutenção', 'Inativas'],
+      datasets: [{
+        data: [1, 17, 8],
+        backgroundColor: ['#22c55e', '#f59e0b', '#6b7280'],
+        borderWidth: 0,
+        hoverOffset: 6
+      }]
+    },
+    options: {
+      cutout: '70%',
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => ` ${ctx.label}: ${ctx.parsed} unidades`
+          }
+        }
+      }
+    }
+  });
+
     // Mobile menu
     const toggle = document.getElementById('navToggle');
     const menu = document.getElementById('navMenu');
