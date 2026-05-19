@@ -344,6 +344,7 @@ h1, h2, h3, h4 {
    HERO
    ========================================== */
 
+/* INÚTIL: não usado em index.html, pagina-lojas.html ou pag-equip-130.html */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -509,6 +510,7 @@ h1, h2, h3, h4 {
    NÚMEROS
    ========================================== */
 
+/* INÚTIL: não usado em index.html, pagina-lojas.html ou pag-equip-130.html */
 .numeros { /* EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR */
   background: #6ee78c;
   padding: 48px 0;
@@ -552,6 +554,7 @@ h1, h2, h3, h4 {
    SERVIÇOS
    ========================================== */
 
+/* INÚTIL: não usado em index.html, pagina-lojas.html ou pag-equip-130.html */
 .servicos {
   padding: 96px 0;
   background: var(--color-bg-page);
