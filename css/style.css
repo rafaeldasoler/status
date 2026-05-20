@@ -702,68 +702,7 @@ h1, h2, h3, h4 {
   margin-bottom: 2rem;
 }
 
-/* ==========================================
-   FOOTER
-   ========================================== */
 
-.footer {
-  background: var(--color-text-main);
-  padding-top: 56px;
-}
-
-.footer-inner {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 48px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.footer-brand .logo-text {
-  color: #fff;
-  font-size: 1.1rem;
-  display: block;
-  margin-bottom: 12px;
-}
-
-.footer-brand p {
-  font-size: 0.875rem;
-  color: rgba(255,255,255,0.45);
-  line-height: 1.7;
-  max-width: 260px;
-}
-
-.footer-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-nav-title {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-  margin-bottom: 4px;
-}
-
-.footer-nav a {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.6);
-  transition: color var(--transition-fast);
-}
-
-.footer-nav a:hover {
-  color: var(--color-primary-light);
-}
-
-.footer-bottom {
-  text-align: center;
-  padding: 20px 24px;
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.3);
-}
 
 /* ==========================================
    CARDS (COMUM) — mantidos para outras páginas
@@ -1357,6 +1296,68 @@ a.card-loja:hover {
  
 a.card-loja:hover .card-arrow {
   transform: translateX(3px);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+  background: var(--color-text-main);
+  padding-top: 56px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-brand .logo-text {
+  color: #fff;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.7;
+  max-width: 260px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-nav-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 4px;
+}
+
+.footer-nav a {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  transition: color var(--transition-fast);
+}
+
+.footer-nav a:hover {
+  color: var(--color-primary-light);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
 }
 
 /* =======================================================
