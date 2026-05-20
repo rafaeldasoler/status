@@ -298,6 +298,43 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================
+               HEADER — LOJAS
+   ========================================== */ 
+.page-header {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  padding: calc(var(--navbar-height) + 40px) 0 48px;
+}
+ 
+.page-header-inner {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+ 
+.page-header-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 600;
+  color: var(--color-primary-contrast);
+  margin-bottom: 8px;
+}
+ 
+.page-header-desc {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.75);
+  max-width: 400px;
+}
+ 
+.page-header .section-tag {
+  color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.15);
+}
+
+/* ==========================================
    UTILITÁRIOS
    ========================================== */
 
@@ -341,6 +378,55 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================
+                GRID DE LOJAS
+   ========================================== */ 
+.lojas-main {
+  padding: 40px 0 64px;
+}
+ 
+.lojas-inner {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* ==========================================
+   CARDS (COMUM) — mantidos para outras páginas
+   ========================================== */
+
+.card-loja, .card-equip {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-sm);
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card-loja {
+  flex: 0 0 250px;
+  padding: 5px;
+}
+
+.card-loja:hover, .card-equip:hover {
+  transform: scale(0.97);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.card-loja h4 { 
+  color: var(--color-text-main); 
+  margin-bottom: 5px; 
+}
+
+.card-loja p { 
+  font-size: 0.8rem; 
+  color: var(--color-text-muted); 
+  margin-bottom: 3px; 
+}
+
+/* ==========================================
    BOTÕES
    ========================================== */
 .btn {
@@ -373,384 +459,7 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-md);
 }
 
-.btn-ghost {
-  background-color: transparent;
-  color: var(--color-primary-contrast);
-  border-color: rgba(255,255,255,0.5);
-}
 
-.btn-ghost:hover {
-  background-color: rgba(255,255,255,0.12);
-  border-color: rgba(255,255,255,0.8);
-  transform: translateY(-2px);
-}
-
-.btn-white {
-  background-color: var(--color-surface);
-  color: var(--color-primary);
-  border-color: var(--color-surface);
-  font-weight: 600;
-}
-
-.btn-white:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-
-/* ==========================================
-   HERO
-   ========================================== */
-
-/* INÚTIL: não usado em index.html, pagina-lojas.html ou pag-equip-130.html */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, var(--color-primary-light) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  padding-top: var(--navbar-height);
-}
-
-.hero-bg-shapes {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.shape {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.08;
-  background: #ffffff;
-}
-
-.shape-1 {
-  width: 500px;
-  height: 500px;
-  top: -120px;
-  right: -80px;
-}
-
-.shape-2 {
-  width: 300px;
-  height: 300px;
-  bottom: 60px;
-  left: -60px;
-}
-
-.shape-3 {
-  width: 180px;
-  height: 180px;
-  top: 40%;
-  left: 40%;
-}
-
-.hero-inner {
-  position: relative;
-  max-width: var(--max-content-width);
-  margin: 0 auto;
-  padding: 80px 24px 100px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 60px;
-}
-
-.hero-tag {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
-  background: rgba(255,255,255,0.15);
-  border-radius: var(--radius-full);
-  padding: 4px 14px;
-  margin-bottom: 1.2rem;
-  backdrop-filter: blur(6px);
-}
-
-.hero-title {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
-  font-weight: 800;
-  color: var(--color-primary-contrast);
-  margin-bottom: 1.2rem;
-  line-height: 1.1;
-}
-
-.hero-desc {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.82);
-  line-height: 1.7;
-  max-width: 440px;
-  margin-bottom: 2rem;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.hero-visual {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.hero-card {
-  background: rgba(255,255,255,0.14);
-  border: 1px solid rgba(255,255,255,0.22);
-  border-radius: var(--radius-md);
-  padding: 24px 16px;
-  text-align: center;
-  backdrop-filter: blur(8px);
-  transition: transform var(--transition-normal), background var(--transition-normal);
-}
-
-.hero-card:hover {
-  transform: translateY(-4px);
-  background: rgba(255,255,255,0.22);
-}
-
-.hero-card-icon {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.hero-card-label {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.9);
-}
-
-.hero-scroll-hint {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: rgba(255,255,255,0.6);
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  animation: fadeInUp 1s ease 0.5s both;
-}
-
-.scroll-arrow {
-  width: 20px;
-  height: 20px;
-  border-right: 2px solid rgba(255,255,255,0.5);
-  border-bottom: 2px solid rgba(255,255,255,0.5);
-  transform: rotate(45deg);
-  animation: bounce 1.6s ease infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: rotate(45deg) translateY(0); }
-  50% { transform: rotate(45deg) translateY(5px); }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateX(-50%) translateY(12px); }
-  to { opacity: 1; transform: translateX(-50%) translateY(0); }
-}
-
-/* ==========================================
-   NÚMEROS
-   ========================================== */
-
-/* INÚTIL: não usado em index.html, pagina-lojas.html ou pag-equip-130.html */
-.numeros { /* EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR */
-  background: #6ee78c;
-  padding: 48px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.numeros .section-inner { /* EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-}
-
-.numero-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  padding: 16px 12px;
-  border-right: 1px solid rgba(0,0,0,0.07);
-}
-
-.numero-item:last-child {
-  border-right: none;
-}
-
-.numero-valor {
-  font-family: var(--font-heading);
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  line-height: 1;
-}
-
-.numero-label {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  text-align: center;
-}
-
-/* ==========================================
-   SERVIÇOS
-   ========================================== */
-
-/* INÚTIL: não usado em index.html, pagina-lojas.html ou pag-equip-130.html */
-.servicos {
-  padding: 96px 0;
-  background: var(--color-bg-page);
-}
-
-.servicos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.servico-card {
-  background: var(--color-surface);
-  border-radius: var(--radius-md);
-  padding: 32px 24px;
-  position: relative;
-  border: 1px solid rgba(0,0,0,0.06);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-}
-
-.servico-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-
-.servico-card.destaque {
-  border-color: var(--color-primary);
-  background: linear-gradient(135deg, rgba(56,182,233,0.04) 0%, rgba(56,182,233,0.01) 100%);
-}
-
-.servico-icon {
-  font-size: 2rem;
-  margin-bottom: 16px;
-}
-
-.servico-card h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: var(--color-text-main);
-}
-
-.servico-card p {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  line-height: 1.65;
-}
-
-.servico-badge {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: var(--color-primary);
-  color: var(--color-primary-contrast);
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: var(--radius-full);
-  letter-spacing: 0.04em;
-}
-
-
-
-/* ==========================================
-   CTA FINAL
-   ========================================== */
-
-.cta-section {
-  padding: 96px 0;
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
-}
-
-.cta-inner {
-  text-align: center;
-}
-
-.cta-inner h2 {
-  font-family: var(--font-heading);
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  font-weight: 800;
-  color: var(--color-primary-contrast);
-  margin-bottom: 1rem;
-}
-
-.cta-inner p {
-  font-size: 1rem;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 2rem;
-}
-
-
-
-/* ==========================================
-   CARDS (COMUM) — mantidos para outras páginas
-   ========================================== */
-
-.card-loja, .card-equip {
-  background-color: var(--color-surface);
-  border-radius: var(--radius-sm);
-  position: relative;
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-}
-
-.card-loja {
-  flex: 0 0 250px;
-  padding: 5px;
-}
-
-.card-loja:hover, .card-equip:hover {
-  transform: scale(0.97);
-  box-shadow: var(--shadow-sm);
-  cursor: pointer;
-}
-
-.card-loja h4 { color: var(--color-text-main); margin-bottom: 5px; }
-.card-loja p { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 3px; }
-
-/* ==========================================
-   COMPONENTES DE STATUS
-   ========================================== */
-
-.operacional, .alerta, .manutencao, .parado {
-  width: 100px;
-  border-radius: var(--radius-full);
-  text-align: center;
-  padding: 5px 10px;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.card-loja .operacional, .card-equip .operacional { background: var(--color-bg-success); color: var(--color-success); }
-.card-loja .alerta, .card-equip .alerta { background: var(--color-bg-warning); color: var(--color-warning); }
-.card-loja .manutencao, .card-loja .parado,
-.card-equip .manutencao, .card-equip .parado { background: var(--color-bg-danger); color: var(--color-danger); }
-
-.card-loja .icone { position: absolute; top: 5px; right: 5px; font-size: 18px; }
-.icone-ok { color: var(--color-success); text-shadow: var(--shadow-icon-success); }
-.icone-alerta { color: var(--color-warning); text-shadow: var(--shadow-icon-warning); }
-.icone-manutencao, .icone-parado { color: var(--color-danger); text-shadow: var(--shadow-icon-danger); }
 
 /* ==========================================
    PÁGINA DE EQUIPAMENTOS
@@ -808,43 +517,7 @@ h1, h2, h3, h4 {
 
 
  
-/* ==========================================
-   PAGE HEADER — LOJAS
-   ========================================== */
- 
-.page-header {
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
-  padding: calc(var(--navbar-height) + 40px) 0 48px;
-}
- 
-.page-header-inner {
-  max-width: var(--max-content-width);
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-}
- 
-.page-header-title {
-  font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 600;
-  color: var(--color-primary-contrast);
-  margin-bottom: 8px;
-}
- 
-.page-header-desc {
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.75);
-  max-width: 400px;
-}
- 
-.page-header .section-tag {
-  color: rgba(255,255,255,0.8);
-  background: rgba(255,255,255,0.15);
-}
+
  
 /* Resumo de status no header */
 .status-resumo {
@@ -973,22 +646,7 @@ h1, h2, h3, h4 {
   background: rgba(255,255,255,0.7);
 }
  
-/* ==========================================
-   GRID DE LOJAS
-   ========================================== */
- 
-.lojas-main {
-  padding: 40px 0 64px;
-}
- 
-.lojas-inner {
-  max-width: var(--max-content-width);
-  margin: 0 auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
+
 
 /* --- Circuitos e Grid --- */
 .equipamentos-section {
@@ -1299,6 +957,56 @@ a.card-loja:hover .card-arrow {
 }
 
 /* ==========================================
+           COMPONENTES DE STATUS
+   ========================================== */
+.operacional, .alerta, .manutencao, .parado {
+  width: 100px;
+  border-radius: var(--radius-full);
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.card-loja .operacional, .card-equip .operacional { 
+  background: var(--color-bg-success); 
+  color: var(--color-success); 
+}
+
+.card-loja .alerta, .card-equip .alerta { 
+  background: var(--color-bg-warning); 
+  color: var(--color-warning); 
+}
+
+.card-loja .manutencao, .card-loja .parado,
+.card-equip .manutencao, .card-equip .parado { 
+  background: var(--color-bg-danger); 
+  color: var(--color-danger); 
+}
+
+.card-loja .icone { 
+  position: absolute; 
+  top: 5px; 
+  right: 5px; 
+  font-size: 18px; 
+}
+
+.icone-ok { 
+  color: var(--color-success); 
+  text-shadow: var(--shadow-icon-success); 
+}
+
+.icone-alerta { 
+  color: var(--color-warning); 
+  text-shadow: var(--shadow-icon-warning); 
+} 
+
+.icone-manutencao, .icone-parado { 
+  color: var(--color-danger); 
+  text-shadow: var(--shadow-icon-danger); 
+}
+
+/* ==========================================
    FOOTER
    ========================================== */
 .footer {
@@ -1383,41 +1091,43 @@ a.card-loja:hover .card-arrow {
     padding: 64px 24px 80px;
   }
 
-  .hero-visual {
+  /*.hero-visual {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-  }
+  }*/
 
-  .hero-card {
+  /*.hero-card {
     padding: 16px 8px;
-  }
+  }*/
 
-  .hero-card-icon { font-size: 1.5rem; }
+  /*.hero-card-icon { 
+    font-size: 1.5rem; 
+  }*/
 
-  .servicos-grid {
+  /*.servicos-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
+  }*/
 
   .sobre-inner {
     grid-template-columns: 1fr;
     gap: 48px;
   }
 
-  .numeros .section-inner { /* EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR */
+  /*.numeros .section-inner {
     grid-template-columns: repeat(2, 1fr);
-  }
+  }*/
 
-  .numero-item:nth-child(2) { 
+  /*.numero-item:nth-child(2) { 
     border-right: none; 
-  }
+  }*/
   
-  .numero-item:nth-child(3) {
+  /*.numero-item:nth-child(3) {
     border-right: 1px solid rgba(0,0,0,0.07); 
-  }
+  }*/
 
-  .numero-item:nth-child(3), .numero-item:nth-child(4) { 
+  /*.numero-item:nth-child(3), .numero-item:nth-child(4) { 
     border-top: 1px solid rgba(0,0,0,0.07); 
-  }
+  }*/
 
   .footer-inner {
     grid-template-columns: 1fr 1fr;
@@ -1570,27 +1280,27 @@ a.card-loja:hover .card-arrow {
     display: flex;
   }
 
-  .hero-visual {
+  /*.hero-visual {
     grid-template-columns: repeat(2, 1fr);
-  }
+  }*/
 
-  .hero-actions {
+  /*.hero-actions {
     flex-direction: column;
     align-items: flex-start;
-  }
+  }*/
 
   .btn {
     width: 100%;
     justify-content: center;
   }
 
-  .servicos-grid {
+  /*.servicos-grid {
     grid-template-columns: 1fr;
-  }
+  }*/
 
-  .numeros .section-inner { /* EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR */
+  /*.numeros .section-inner {
     grid-template-columns: repeat(2, 1fr);
-  }
+  }*/
 
   .footer-inner {
     grid-template-columns: 1fr;
@@ -1604,26 +1314,26 @@ a.card-loja:hover .card-arrow {
  
 /* ----------------------------------------------- */
 @media (max-width: 400px) {
-  .hero-title {
+  /*.hero-title {
     font-size: 1.8rem;
-  }
+  }*/
 
-  .hero-visual {
+  /*.hero-visual {
     grid-template-columns: repeat(2, 1fr);
-  }
+  }*/
 
-  .numero-valor {
+  /*.numero-valor {
     font-size: 1.9rem;
-  }
+  }*/
 
-  .numeros .section-inner { /* EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR EXCLUIR */
+  /*.numeros .section-inner {
     grid-template-columns: repeat(2, 1fr);
-  }
+  }*/
 
-  .numero-item {
+  /*.numero-item {
     border-right: none;
     border-bottom: 1px solid rgba(0,0,0,0.07);
-  }
+  }*/
   
   .lojas-inner {
     grid-template-columns: 1fr;
