@@ -337,9 +337,7 @@ h1, h2, h3, h4 {
 /* ==========================================
    UTILITÁRIOS
    ========================================== */
-.obsoleto { 
-  background-color: var(--color-surface-muted); 
-}
+
 
 .section-inner {
   width: 100%;
@@ -397,7 +395,7 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================
-   CARDS LOJA (COMUM) mantidos para outras páginas
+                 CARDS LOJA
    ========================================== */
 .card-loja {
   background: var(--color-surface);
@@ -423,10 +421,50 @@ h1, h2, h3, h4 {
   margin-bottom: 3px; 
 }
 
+/* Header do card: número + ícone de status */
+.card-loja-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+.card-loja-numero {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1;
+}
+ 
+.card-status-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
 .card-loja:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-5px);
   border-color: var(--color-primary-light);
+}
+
+.card-status-icon.operacional {
+  background: var(--color-bg-success);
+  color: var(--color-success);
+}
+ 
+.card-status-icon.manutencao {
+  background: var(--color-bg-danger);
+  color: var(--color-danger);
+}
+ 
+.card-status-icon.alerta {
+  background: var(--color-bg-warning);
+  color: var(--color-warning);
 }
 
 /* ==========================================
@@ -487,12 +525,6 @@ h1, h2, h3, h4 {
   transform: translateY(-5px);
   border-color: var(--color-primary-light);
 }
-
-
-
-
-
-
 
 
 
@@ -756,55 +788,9 @@ h1, h2, h3, h4 {
 /* ==========================================
    CARD LOJA — REDESIGN
    ========================================== */
+  
  
 
- 
- 
-.card-loja.obsoleto {
-  background: var(--color-surface-muted);
-  border-color: rgba(0,0,0,0.05);
-  opacity: 0.75;
-}
- 
-/* Header do card: número + ícone de status */
-.card-loja-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
- 
-.card-loja-numero {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  line-height: 1;
-}
- 
-.card-status-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.95rem;
-}
- 
-.card-status-icon.operacional {
-  background: var(--color-bg-success);
-  color: var(--color-success);
-}
- 
-.card-status-icon.manutencao {
-  background: var(--color-bg-danger);
-  color: var(--color-danger);
-}
- 
-.card-status-icon.alerta {
-  background: var(--color-bg-warning);
-  color: var(--color-warning);
-}
  
 /* Nome da cidade */
 .card-loja-nome {
@@ -926,23 +912,15 @@ h1, h2, h3, h4 {
   color: var(--color-danger); 
 }
 
-.icone-ok { 
-  color: var(--color-success); 
-  text-shadow: var(--shadow-icon-success); 
-}
-
-.icone-alerta { 
-  color: var(--color-warning); 
-  text-shadow: var(--shadow-icon-warning); 
-} 
-
-.icone-manutencao, .icone-parado { 
-  color: var(--color-danger); 
-  text-shadow: var(--shadow-icon-danger); 
+/* ==========================================
+          OBSOLETOS E DESATUALIZADOS
+   ========================================== */
+.obsoleto { 
+  background-color: var(--color-surface-muted); 
 }
 
 /* ==========================================
-   FOOTER
+                    FOOTER
    ========================================== */
 .footer {
   background: var(--color-text-main);
@@ -1026,43 +1004,10 @@ h1, h2, h3, h4 {
     padding: 64px 24px 80px;
   }
 
-  /*.hero-visual {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }*/
-
-  /*.hero-card {
-    padding: 16px 8px;
-  }*/
-
-  /*.hero-card-icon { 
-    font-size: 1.5rem; 
-  }*/
-
-  /*.servicos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }*/
-
   .sobre-inner {
     grid-template-columns: 1fr;
     gap: 48px;
   }
-
-  /*.numeros .section-inner {
-    grid-template-columns: repeat(2, 1fr);
-  }*/
-
-  /*.numero-item:nth-child(2) { 
-    border-right: none; 
-  }*/
-  
-  /*.numero-item:nth-child(3) {
-    border-right: 1px solid rgba(0,0,0,0.07); 
-  }*/
-
-  /*.numero-item:nth-child(3), .numero-item:nth-child(4) { 
-    border-top: 1px solid rgba(0,0,0,0.07); 
-  }*/
 
   .footer-inner {
     grid-template-columns: 1fr 1fr;
@@ -1215,27 +1160,10 @@ h1, h2, h3, h4 {
     display: flex;
   }
 
-  /*.hero-visual {
-    grid-template-columns: repeat(2, 1fr);
-  }*/
-
-  /*.hero-actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }*/
-
   .btn {
     width: 100%;
     justify-content: center;
   }
-
-  /*.servicos-grid {
-    grid-template-columns: 1fr;
-  }*/
-
-  /*.numeros .section-inner {
-    grid-template-columns: repeat(2, 1fr);
-  }*/
 
   .footer-inner {
     grid-template-columns: 1fr;
@@ -1249,27 +1177,6 @@ h1, h2, h3, h4 {
  
 /* ----------------------------------------------- */
 @media (max-width: 400px) {
-  /*.hero-title {
-    font-size: 1.8rem;
-  }*/
-
-  /*.hero-visual {
-    grid-template-columns: repeat(2, 1fr);
-  }*/
-
-  /*.numero-valor {
-    font-size: 1.9rem;
-  }*/
-
-  /*.numeros .section-inner {
-    grid-template-columns: repeat(2, 1fr);
-  }*/
-
-  /*.numero-item {
-    border-right: none;
-    border-bottom: 1px solid rgba(0,0,0,0.07);
-  }*/
-  
   .lojas-inner {
     grid-template-columns: 1fr;
   }
