@@ -219,8 +219,7 @@ h1, h2, h3, h4 {
 
 /* ==========================================
    NAVBAR — ESTADO FIXO PARA PÁGINAS INTERNAS
-   ========================================== */
- 
+   ========================================== */ 
 .navbar {
   background: var(--color-surface);
   box-shadow: var(--shadow-sm);
@@ -344,7 +343,6 @@ h1, h2, h3, h4 {
 /* ==========================================
    BOTÕES
    ========================================== */
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -354,6 +352,7 @@ h1, h2, h3, h4 {
   font-size: 0.95rem;
   font-weight: 500;
   padding: 12px 28px;
+  margin-top: 1.5rem;
   border-radius: var(--radius-full);
   border: 2px solid transparent;
   cursor: pointer;
