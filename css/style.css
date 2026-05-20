@@ -105,9 +105,8 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================
-                    NAVBAR
+              NAVBAR - MENU SUPERIOR
    ========================================== */
-
 .navbar {
   position: fixed; /* Fixa o elemento na tela, ignorando o scroll da página */
   top: 0; /* Alinha o elemento no topo e expande para as bordas laterais */
@@ -237,6 +236,66 @@ h1, h2, h3, h4 {
  
 .navbar .navbar-toggle span {
   background: var(--color-text-main);
+}
+
+/* ==========================================
+   SOBRE
+   ========================================== */
+.sobre-section {
+  padding: 96px 0;
+  background: var(--color-bg-page);
+}
+
+.sobre-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.sobre-texto p {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.sobre-diferenciais {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.diferencial {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.diferencial-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(56,182,233,0.12);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.diferencial h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--color-text-main);
+}
+
+.diferencial p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
 }
 
 /* ==========================================
@@ -615,66 +674,7 @@ h1, h2, h3, h4 {
   letter-spacing: 0.04em;
 }
 
-/* ==========================================
-   SOBRE
-   ========================================== */
 
-.sobre-section {
-  padding: 96px 0;
-  background: var(--color-bg-page);
-}
-
-.sobre-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  align-items: start;
-}
-
-.sobre-texto p {
-  color: var(--color-text-muted);
-  line-height: 1.75;
-  margin-bottom: 1rem;
-}
-
-.sobre-diferenciais {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.diferencial {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.diferencial-icon {
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(56,182,233,0.12);
-  color: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-
-.diferencial h4 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-  color: var(--color-text-main);
-}
-
-.diferencial p {
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
-  line-height: 1.6;
-}
 
 /* ==========================================
    CTA FINAL
